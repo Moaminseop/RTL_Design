@@ -1,0 +1,355 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set currentDesign arithmetic_unit
+arithmetic_unit
+set sourceFolder  {rtl}
+rtl
+#Need not touch from here
+set tmpStr ./saed32hvt_ff0p95v125c.db
+./saed32hvt_ff0p95v125c.db
+set target_library $tmpStr
+./saed32hvt_ff0p95v125c.db
+set link_library "* $target_library"
+* ./saed32hvt_ff0p95v125c.db
+analyze $sourceFolder -autoread -recursive -top $currentDesign
+== ANALYZE autoread for top design 'arithmetic_unit' ==
+
+Starting ANALYZE autoread mode...
+Information: Adding '/home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl'. (AUTOREAD-105)
+Information: Adding '/home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit_tb.v'.  (AUTOREAD-100)
+Information: Scanning file { arithmetic_unit.v }. (AUTOREAD-303)
+Information: Scanning file { arithmetic_unit_tb.v }. (AUTOREAD-303)
+Compiling source file /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v
+Presto compilation completed successfully.
+Autoread command completed successfully.
+1
+elaborate     $currentDesign
+Loading db file '/home/KNUEEhdd1/comp311/comp2/proj1/dc/saed32hvt_ff0p95v125c.db'
+Loading db file '/usr/synopsys/syn/O-2018.06-SP4/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/O-2018.06-SP4/libraries/syn/standard.sldb'
+  Loading link library 'saed32hvt_ff0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'arithmetic_unit'.
+Information: Building the design 'adder'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:50: The width of port p3 on instance fba1 of design four_bit_adder is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_adder:fba1. (ELAB-327)
+Information: Building the design 'subtractor'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:93: The width of port p3 on instance fbs1 of design four_bit_subtractor is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_subtractor:fbs1. (ELAB-327)
+Information: Building the design 'multiplier'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'divider'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'adder_32bit'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:186: The width of port p3 on instance fba1 of design four_bit_adder is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_adder:fba1. (ELAB-327)
+Warning: Design 'arithmetic_unit' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+current_design $currentDesign
+Current design is 'arithmetic_unit'.
+{arithmetic_unit}
+#setting clock
+#set clockPorts {clk}
+#create_clock -name myCLK $clockPorts -period 2.0 -waveform {0 1.0}
+#Common options
+set_max_area 0
+1
+set_host_options -max_cores 4
+1
+#uniquify
+compile
+Warning: Design 'arithmetic_unit' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 441 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'divider'
+  Processing 'multiplier'
+  Processing 'arithmetic_unit'
+Information: Building the design 'adder'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:50: The width of port p3 on instance fba1 of design four_bit_adder is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_adder:fba1. (ELAB-327)
+Information: Building the design 'subtractor'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:93: The width of port p3 on instance fbs1 of design four_bit_subtractor is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_subtractor:fbs1. (ELAB-327)
+Information: Building the design 'adder_32bit'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:186: The width of port p3 on instance fba1 of design four_bit_adder is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_adder:fba1. (ELAB-327)
+Warning: Unable to resolve reference 'adder' in 'arithmetic_unit'. (LINK-5)
+Warning: Unable to resolve reference 'subtractor' in 'arithmetic_unit'. (LINK-5)
+Warning: Unable to resolve reference 'adder_32bit' in 'multiplier'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'divider_DW01_cmp2_0'
+  Processing 'divider_DW01_sub_0'
+  Processing 'divider_DW01_cmp2_1'
+  Processing 'divider_DW01_sub_1'
+  Processing 'divider_DW01_cmp2_2'
+  Processing 'divider_DW01_sub_2'
+  Processing 'divider_DW01_cmp2_3'
+  Processing 'divider_DW01_sub_3'
+  Processing 'divider_DW01_cmp2_4'
+  Processing 'divider_DW01_sub_4'
+  Processing 'divider_DW01_cmp2_5'
+  Processing 'divider_DW01_sub_5'
+  Processing 'divider_DW01_cmp2_6'
+  Processing 'divider_DW01_sub_6'
+  Processing 'divider_DW01_cmp2_7'
+  Processing 'divider_DW01_sub_7'
+  Processing 'divider_DW01_cmp2_8'
+  Processing 'divider_DW01_sub_8'
+  Processing 'divider_DW01_cmp2_9'
+  Processing 'divider_DW01_sub_9'
+  Processing 'divider_DW01_cmp2_10'
+  Processing 'divider_DW01_sub_10'
+  Processing 'divider_DW01_cmp2_11'
+  Processing 'divider_DW01_sub_11'
+  Processing 'divider_DW01_cmp2_12'
+  Processing 'divider_DW01_sub_12'
+  Processing 'divider_DW01_cmp2_13'
+  Processing 'divider_DW01_sub_13'
+  Processing 'divider_DW01_cmp2_14'
+  Processing 'divider_DW01_sub_14'
+  Processing 'divider_DW01_cmp2_15'
+  Processing 'multiplier_DW01_cmp2_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'divider'
+  Mapping 'divider'
+  Structuring 'multiplier'
+  Mapping 'multiplier'
+  Structuring 'arithmetic_unit'
+  Mapping 'arithmetic_unit'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    3823.1      0.00       0.0     100.5                          
+    0:00:02    3823.1      0.00       0.0     100.5                          
+    0:00:02    3823.1      0.00       0.0     100.5                          
+    0:00:02    3823.1      0.00       0.0     100.5                          
+    0:00:03    3823.1      0.00       0.0     100.5                          
+    0:00:03    3755.7      0.00       0.0     100.5                          
+    0:00:03    3755.7      0.00       0.0     100.5                          
+    0:00:03    3755.7      0.00       0.0     100.5                          
+    0:00:03    3755.7      0.00       0.0     100.5                          
+    0:00:03    3755.7      0.00       0.0     100.5                          
+    0:00:03    3766.7      0.00       0.0      56.0                          
+    0:00:03    3772.3      0.00       0.0      30.3                          
+    0:00:03    3773.3      0.00       0.0      18.2                          
+    0:00:03    3774.3      0.00       0.0       4.1                          
+    0:00:03    3774.8      0.00       0.0       1.1                          
+    0:00:03    3775.1      0.00       0.0       0.5                          
+    0:00:03    3775.3      0.00       0.0       0.0                          
+    0:00:03    3775.6      0.00       0.0       0.0                          
+    0:00:03    3775.6      0.00       0.0       0.0                          
+    0:00:03    3775.6      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03    3775.6      0.00       0.0       0.0                          
+    0:00:03    3775.6      0.00       0.0       0.0                          
+    0:00:03    3775.6      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03    3775.6      0.00       0.0       0.0                          
+    0:00:03    3775.6      0.00       0.0       0.0                          
+    0:00:03    3774.8      0.00       0.0       0.0                          
+    0:00:03    3774.0      0.00       0.0       0.0                          
+    0:00:03    3774.0      0.00       0.0       0.0                          
+    0:00:03    3774.0      0.00       0.0       0.0                          
+    0:00:03    3774.0      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+    0:00:03    3772.3      0.00       0.0       0.0                          
+Loading db file '/home/KNUEEhdd1/comp311/comp2/proj1/dc/saed32hvt_ff0p95v125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+write -f verilog $currentDesign -hierarchy -output $currentDesign.syn.v
+Information: Building the design 'adder'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:50: The width of port p3 on instance fba1 of design four_bit_adder is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_adder:fba1. (ELAB-327)
+Information: Building the design 'subtractor'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:93: The width of port p3 on instance fbs1 of design four_bit_subtractor is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_subtractor:fbs1. (ELAB-327)
+Information: Building the design 'adder_32bit'. (HDL-193)
+Presto compilation completed successfully.
+Error:  /home/KNUEEhdd1/comp311/comp2/proj1/dc/rtl/arithmetic_unit.v:186: The width of port p3 on instance fba1 of design four_bit_adder is inconsistent with other instantiations of the same design. (ELAB-369)
+Error:  Cannot resolve pin p3 on cell four_bit_adder:fba1. (ELAB-327)
+Warning: Unable to resolve reference 'adder' in 'arithmetic_unit'. (LINK-5)
+Warning: Unable to resolve reference 'subtractor' in 'arithmetic_unit'. (LINK-5)
+Warning: Unable to resolve reference 'adder_32bit' in 'multiplier'. (LINK-5)
+Writing verilog file '/home/KNUEEhdd1/comp311/comp2/proj1/dc/arithmetic_unit.syn.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc $currentDesign.sdc
+Warning: Design 'arithmetic_unit' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+report_qor
+Warning: Design 'arithmetic_unit' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : arithmetic_unit
+Version: O-2018.06-SP4
+Date   : Tue May 11 20:39:32 2021
+****************************************
+
+
+  Timing Path Group (none)
+  -----------------------------------
+  Levels of Logic:             206.00
+  Critical Path Length:        455.03
+  Critical Path Slack:         uninit
+  Critical Path Clk Period:       n/a
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         16
+  Hierarchical Port Count:        756
+  Leaf Cell Count:               1568
+  Buf/Inv Cell Count:             335
+  Buf Cell Count:                   0
+  Inv Cell Count:                 335
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      1568
+  Sequential Cell Count:            0
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     3772.259419
+  Noncombinational Area:     0.000000
+  Buf/Inv Area:            427.724353
+  Total Buffer Area:             0.00
+  Total Inverter Area:         427.72
+  Macro/Black Box Area:      0.000000
+  Net Area:               1505.564532
+  -----------------------------------
+  Cell Area:              3772.259419
+  Design Area:            5277.823951
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          2318
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: knuee-srv2
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    1.23
+  Logic Optimization:                  0.43
+  Mapping Optimization:                1.28
+  -----------------------------------------
+  Overall Compile Time:                4.43
+  Overall Compile Wall Clock Time:     3.72
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+exit
+
+Thank you...
